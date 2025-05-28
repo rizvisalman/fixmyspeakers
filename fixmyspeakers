@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fix My Speakers - Gadget Mistri</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f5f5;
+      text-align: center;
+      margin: 0; padding: 0;
+    }
+    h1 {
+      margin-top: 40px;
+      color: #333;
+    }
+    p {
+      font-size: 18px;
+      color: #555;
+      margin: 10px 20px;
+    }
+    button {
+      padding: 15px 30px;
+      margin: 20px 10px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+    }
+    #playBtn {
+      background-color: #2196f3;
+    }
+    #playBtn:hover {
+      background-color: #1976d2;
+    }
+    #stopBtn {
+      background-color: #f44336;
+    }
+    #stopBtn:hover {
+      background-color: #c62828;
+    }
+    .call-btn {
+      display: inline-block;
+      margin: 40px auto 20px;
+      padding: 15px 25px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    footer {
+      color: #777;
+      font-size: 14px;
+      margin: 50px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Fix My Speakers</h1>
+  <p>Play this sound at high frequency to help eject water from your phone's speaker.</p>
+
+  <button id="playBtn">🔊 Play Sound</button>
+  <button id="stopBtn">⏹ Stop Sound</button>
+
+  <audio id="cleaner" preload="auto" loop>
+    <source src="https://aapkausername.github.io/fixmyspeakers/water_eject_165hz.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <a class="call-btn" href="tel:+917081515732">📞 Call Now: 7081515732</a>
+
+  <footer>
+    GadgetMistri.com | Best Mobile Repair Tips & Tools | Lucknow, India
+  </footer>
+
+  <script>
+    const audio = document.getElementById('cleaner');
+    const playBtn = document.getElementById('playBtn');
+    const stopBtn = document.getElementById('stopBtn');
+
+    playBtn.addEventListener('click', () => {
+      audio.currentTime = 0;
+      audio.play();
+    });
+
+    stopBtn.addEventListener('click', () => {
+      audio.pause();
+      audio.currentTime = 0;
+    });
+  </script>
+
+</body>
+</html>
+¯
